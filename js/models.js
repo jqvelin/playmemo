@@ -162,7 +162,7 @@ class Game {
       )
     ) {
       clearInterval(this.STOPWATCH.INTERVAL);
-      if (this.STOPWATCH.SCORE < this.HIGHSCORE || this.HIGHSCORE !== 0) {
+      if (this.STOPWATCH.SCORE < this.HIGHSCORE || this.HIGHSCORE === '') {
         this.HIGHSCORE = this.STOPWATCH.SCORE;
         this.highscoreElement.textContent = this.STOPWATCH.SCORE;
         localStorage.setItem("playmemoHighscore", this.STOPWATCH.SCORE);
