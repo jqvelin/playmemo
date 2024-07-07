@@ -1,0 +1,7 @@
+html {
+  --background-gradient-from: rgb(75, 138, 255);
+  --background-gradient-to: rgb(46, 63, 255);
+  --primary-color: white;
+  --secondary-color: rgb(46, 63, 255);
+  --secondary-color-light: rgb(61, 77, 254);
+}

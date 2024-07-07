@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Flip cards and memorize what is pictured on them to open correct pairs"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="./assets/favicons/favicon.svg" />
+    <link rel="icon" type="image/png" href="./assets/favicons/favicon.png" />
+
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <script defer src="./js/models.js"></script>
+    <script defer src="./js/constants.js"></script>
+    <script defer src="./js/main.js"></script>
+
+    <title>Play Memo</title>
+  </head>
+  <body>
+    <main>
+      <div class="game-wrapper"></div>
+      <div class="game__details">
+        <span class="game__currentscore"></span>
+
+        <div class="game__highscore-container">
+          <img src="./assets/icons/trophy.svg" alt="trophy" class="icon" />
+          <span class="game__highscore"></span>
+        </div>
+
+        <button class="game__restart-btn">
+          <img src="./assets/icons/restart.svg" alt="restart" class="icon" />
+        </button>
+      </div>
+    </main>
+  </body>
+</html>

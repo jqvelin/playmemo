@@ -1,0 +1,82 @@
+.game__card {
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  background-color: transparent;
+  width: 20vw;
+  min-width: 2rem;
+  max-width: 8rem;
+  aspect-ratio: 1;
+  perspective: 500px;
+}
+
+.game__card-pointer {
+  width: 60%;
+  z-index: 100;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 1;
+  rotate: -15deg;
+  transition: opacity 500ms ease;
+  animation: point 1s ease-in-out infinite;
+}
+
+.game__card.flipped .game__card-content {
+  transform: rotateY(180deg);
+}
+
+.game__card-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+.game__card-content-front,
+.game__card-content-back {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background-color: white;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.game__card-content-back {
+  transform: rotateY(180deg);
+}
+
+.game__card-content-back img {
+  width: 80%;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes point {
+  0% {
+    scale: 1;
+    bottom: 0;
+    right: 0;
+  }
+  40% {
+    scale: 0.9;
+    bottom: 5%;
+    right: 5%;
+  }
+  60% {
+    scale: 1;
+    bottom: 0;
+    right: 0;
+  }
+}

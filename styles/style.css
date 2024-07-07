@@ -1,0 +1,86 @@
+@import url("./variables.css");
+@import url("./playmemo.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", "Arial";
+  font-weight: normal;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(
+    var(--background-gradient-from),
+    var(--background-gradient-to)
+  );
+  color: var(--primary-color);
+  display: grid;
+  place-items: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.game-wrapper {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.game__details {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+}
+
+.game__highscore-container {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.game__currentscore,
+.game__highscore {
+  font-weight: bold;
+}
+
+.game__highscore-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon {
+  width: 3rem;
+}
+
+.game__restart-btn {
+  background: none;
+  border: none;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+}
+
+.game__restart-btn img {
+  width: 100%;
+  transition: rotate 300ms ease;
+}
+
+.game__restart-btn:hover img {
+  rotate: 90deg;
+}
