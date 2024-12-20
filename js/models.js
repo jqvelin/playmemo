@@ -10,7 +10,7 @@ class Game {
         SCORE: 0
     };
 
-    HIGHSCORE = parseInt(localStorage.getItem("playmemoHighscore"));
+    HIGHSCORE = parseInt(localStorage.getItem("playmemoHighscore") ?? 0);
 
     FLIPPED_CARDS = [];
 
@@ -288,6 +288,11 @@ class Game {
             this.STOPWATCH.SCORE++;
             this.scoreElement.textContent = this.STOPWATCH.SCORE;
         }, 1000);
+    }
+
+    destroy() {
+        clearInterval(this.STOPWATCH.INTERVAL);
+        localStorage.removeItem("playmemoHighscore")
     }
 }
 
